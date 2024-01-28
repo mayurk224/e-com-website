@@ -1,0 +1,688 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+}
+
+.to-top {
+    background: white;
+    position: fixed;
+    bottom: 16px;
+    right:32px;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:32px;
+    color:#1f1f1f;
+    text-decoration: none;
+    opacity:0;
+    pointer-events: none;
+    transition: all .4s;
+  }
+  
+  .to-top.active {
+    bottom:32px;
+    pointer-events: auto;
+    opacity:1;
+  }
+
+  .shopbycatagory, .latestProducts, .features, .footer{
+    margin-top: 40px;
+  }
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgb(26, 26, 26);
+    height: 60px;
+    position: sticky;
+}
+
+.logo,
+.searchbar,
+.ctc {
+    width: 100%;
+}
+
+.logo{
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img{
+    height: 40px;
+}
+
+.searchbar {
+    display: flex;
+    justify-content: center;
+}
+
+.searchbar input {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+}
+
+.ctc {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.loginbtn{
+    padding: 5px 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.loginbtn img{
+    height: 22px;
+}
+
+.cartbtn{
+    padding: 5px 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cartbtn img{
+    height: 22px;
+}
+
+
+#carouselContainer {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+#carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#prevBtn,
+#nextBtn {
+    cursor: pointer;
+    position: absolute;
+    top: 28%;
+    transform: translateY(-28%);
+    font-size: 24px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    opacity: 0.7;
+    display: flex;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+
+.shopbycatagory {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.sbcHeader label {
+    font-weight: 700;
+    font-family: sans-serif;
+    font-size: 32px;
+    color: #fff;
+}
+
+.catagoryContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.catagoryContainer div{
+    border-radius: 20px;
+}
+.catagoryContainer div div{
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.catagoryContainer div div img{
+    object-fit: cover;
+    object-position: center;
+    height: 200px;
+    width: 300px;
+}
+.catagoryContainer div div div{
+    position: absolute;
+    height: auto;
+    bottom: 15px;
+    left: 15px;
+    border-radius: 0;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.catagoryContainer div div div label{
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+.catagoryContainer div div div button{
+    border-radius: 30px;
+    border: none;
+    padding: 5px 10px;
+    font-family: sans-serif;
+    font-weight: 500;
+    width: 120px;
+}
+
+
+.latestProducts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 40px;
+}
+
+.ltstHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+.ltstHeader label {
+    font-weight: 700;
+    font-family: sans-serif;
+    font-size: 32px;
+    color: #fff;
+}
+
+.ltstHeader a{
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+    padding:  8px 16px;
+    border-radius: 30px;
+    background-color: #1f1f1f;
+}
+
+.ltstProduct {
+    overflow-x: auto;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ProHeader{
+    display: flex;
+    justify-content: center;
+    }
+    .ProductHeader{
+        font-family: sans-serif;
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 1.4;
+        color: #fff;
+        margin-top: 20px;
+    }
+    .productsContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #333;
+        gap: 15px;
+        margin: 20px;
+    }
+    
+    .productCard{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 280px;
+        height: auto;
+        border-radius: 10px;
+        background-color: #fff;
+    }
+    
+    .cardimg{
+        display: flex;
+    }
+    
+    .cardimg .img{
+        width: 250px;
+        height: 250px;
+        margin: auto;
+        margin-top: 15px;
+        object-fit: contain;
+    }
+    
+    .carddetails{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1;
+        padding: 10px;
+        font-family: sans-serif;
+    }
+    
+    .carddetails .proTtl{
+        font-size: 20px;
+        color: #7c7a7b;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 5px;
+        white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: inline-block;
+                max-width: 100%;
+    }
+    
+    .carddetails .proCat{
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: #7c7a7b;
+        margin-bottom: 5px;
+    }
+    .carddetails .proPrice{
+        font-size: 20px;
+        color: #e44d26;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .carddetails div{
+        display: flex;
+        gap: 5px;
+    }
+    .carddetails div .proRate{
+        font-size: 16px;
+        color: #7c7a7b;
+        font-weight: bold;
+    }
+    .carddetails div .proCount{
+        font-size: 16px;
+        color: #7c7a7b;
+        font-weight: bold;
+    }
+
+.features{
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+}
+
+.featuresHeader label{
+    font-weight: 700;
+    font-family: sans-serif;
+    font-size: 32px;
+    color: #fff;
+}
+
+.features hr{
+    width: 100%;
+}
+
+.featuresContaint{
+    padding: 30px 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.fCard{
+    display: flex;
+    gap: 20px;
+}
+
+.ficon{
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 10px;
+    display: flex;
+}
+
+.fdetails{
+    color: white;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.fdetails h2{
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    background-color: #171717;
+    color: white;
+    font-family: sans-serif;
+}
+
+.footer hr{
+    width: 100%;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.left{
+    display: flex;
+    gap: 20px;
+}
+
+.left h1{
+    margin: 0;
+}
+
+.right{
+    display: flex;
+    gap: 10px;
+    align-items: start;
+}
+
+.fabout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: auto;
+    padding: 0 20px;
+}
+
+.fabout h3{
+    margin: 0;
+}
+
+.fabout ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fabout ul li{
+    padding: 5px 0;
+}
+
+.fabout ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bright{
+    display: flex;
+    gap: 20px;
+}
+
+.bright img{
+    color: aliceblue;
+}
+
+
+@media only screen and (max-width: 320px) {
+    .container-fluid{
+        overflow: hidden;
+    }
+.to-top{
+    height: 30px;
+    width: 30px;
+}
+.to-top img{
+    height: 30px;
+    width: 30px;
+}
+    .navbar{
+        display: flex;
+        padding: 10px 0;
+        height: 40px;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        z-index: 50;
+    }
+    .logo{
+        padding-left: 10px;
+    }
+    .logo, .searchbar,.ctc{
+        width: 100%;
+    }
+    .searchbar input{
+        width: 150px;
+    }
+    .ctc{
+        display: flex;
+        justify-content: end;
+        gap: 5px;
+        padding-right: 10px;
+    }
+    .logo img{
+        height: 40px;
+    }
+    .logo label{
+        display: none;
+    }
+    .loginbtn, .cartbtn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3px;
+        height: 20px;
+        width: 20px;
+    }
+    .loginbtn img, .cartbtn img{
+        height: 18px;
+    }
+    .loginbtn label{
+        display: none;
+    }
+    .cartbtn label{
+        display: none;
+    }
+    #carouselContainer{
+        margin-top: 60px;
+        height: 160px;
+    }
+    #carousel {
+        display: flex;
+        transition: transform 1s ease-in-out;
+    }
+    .carousel-item {
+        min-width: 100%;
+        box-sizing: border-box;
+    }
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    #prevBtn,
+    #nextBtn {
+        cursor: pointer;
+        position: absolute;
+        top: 17%;
+        transform: translateY(-17%);
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+        outline: none;
+        opacity: 0.5;
+        display: flex;
+        padding: 5px;
+    }
+    #prevBtn {
+        left: 10px;
+    }
+    #nextBtn {
+        right: 10px;
+    }
+    .shopbycatagory{
+        margin-top: 20px;
+    }
+    .sbcHeader label{
+        font-size: x-large;
+    }
+    .catagoryContainer{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .latestProducts{
+        padding: 0 20px;
+    }
+    .ltstHeader label{
+        font-size: x-large;
+    }
+    .ltstHeader a{
+        font-size: small;
+    }
+    .features{
+        margin-top: 20px;
+        padding: 0 15px;
+    }
+    .featuresContaint{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .featuresHeader label{
+        font-size: x-large;
+    }
+    .ficon{
+        height: 30px;
+        width: 30px;
+        padding: 10px;
+    }
+    .ficon img{
+        height: 30px;
+        width: 30px;
+    }
+    .fCard h2{
+        font-size: large;
+    }
+    .fCard label{
+        font-size: medium;
+    }
+    .footer{
+        margin-top: 20px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 20px;
+    }
+    .top{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .left{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .right{
+        display: flex;
+        flex-direction: column;
+    }
+    .fabout{
+        
+    }
+    .bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .bleft{
+        display: flex;
+        text-align: center;
+    }
+    .bleft label{
+        font-size: 14px;
+    }
+  }
+

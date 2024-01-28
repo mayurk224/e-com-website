@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "title":"Fast Delivery",
+        "description":"Fast delivery aims to deliver the products within a short time frame, often within the same day or the next day",
+        "logo":"https://img.icons8.com/color/48/delivery--v1.png"
+    },
+    {
+        "id":2,
+        "title":"Good Deal",
+        "description":"It involves efficient logistics and supply chain management to ensure that the products are picked, packed, and delivered promptly.",
+        "logo":"https://img.icons8.com/color/48/handshake--v1.png"
+    },
+    {
+        "id":3,
+        "title":"Satisfaction",
+        "description":"Fast delivery can significantly enhance customer satisfaction as customers appreciate receiving their orders quickly.",
+        "logo":"https://img.icons8.com/external-parzival-1997-outline-color-parzival-1997/64/external-satisfaction-logistics-and-supply-chain-management-parzival-1997-outline-color-parzival-1997.png"
+    }
+]
