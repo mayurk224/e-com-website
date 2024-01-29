@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="/index.html" class="logo">
+      <img
+        src="https://img.icons8.com/external-parzival-1997-outline-color-parzival-1997/64/external-satisfaction-logistics-and-supply-chain-management-parzival-1997-outline-color-parzival-1997.png"
+        alt="external-satisfaction-logistics-and-supply-chain-management-parzival-1997-outline-color-parzival-1997" />
+      <label for="">Purchase Paradise</label>
+    </a>
+    <div class="searchbar">
+      <input type="search" name="" id="">
+    </div>
+    <div class="ctc">
+      <a href="" class="loginbtn"><img src="https://img.icons8.com/ios-filled/50/login-rounded-right.png"
+          alt="login-rounded-right" />
+        <label for="">Login</label>
+      </a>
+      <a href="" class="cartbtn"><img src="https://img.icons8.com/material-outlined/24/shopping-cart--v1.png"
+          alt="shopping-cart--v1" />
+        <label for="">Cart</label>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="productpg">
+    <div class="filterproductblock">
+      <div class="filterblock" id="sidebar">
+        <div class="flhead">
+          <label for="" class="fillHead">Filter</label>
+          <button onclick="refreshPage()">Reset</button>
+          
+        </div>
+        <hr>
+        <div class="catblock">
+          <label for="" class="cathead">Category</label>
+          <div class="checkbox-group">
+            <div class="checkbox-wrapper">
+              <div class="custom-checkbox">
+                <input type="checkbox" id="electronics" class="filter-checkbox" data-category="electronics"
+                  onchange="filterProductByCategory()">
+                <div class="checkmark"></div>
+              </div>
+              <label for="checkbox1">Electronics</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <div class="custom-checkbox">
+                <input type="checkbox" id="jewelery" class="filter-checkbox" data-category="jewelery"
+                  onchange="filterProductByCategory()">
+                <div class="checkmark"></div>
+              </div>
+              <label for="checkbox2">Jewellery</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <div class="custom-checkbox">
+                <input type="checkbox" id="men's clothing" class="filter-checkbox" data-category="men's clothing"
+                  onchange="filterProductByCategory()">
+                <div class="checkmark"></div>
+              </div>
+              <label for="checkbox2">Mens Clothing</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <div class="custom-checkbox">
+                <input type="checkbox" id="women's clothing" class="filter-checkbox" data-category="women's clothing"
+                  onchange="filterProductByCategory()">
+                <div class="checkmark"></div>
+              </div>
+              <label for="checkbox2">Womens Clothing</label>
+            </div>
+            <!-- Add more checkbox-wrapper elements for additional options -->
+          </div>
+        </div>
+        <div class="priceblock">
+          <label for="">Price</label>
+          <div class="slider-container">
+            <input type="range" id="priceRange" min="0" max="1000" step="1" value="0"
+              onchange="filterProductsByPrice()">
+
+          </div>
+          <div class="amount">
+            <label for="amount">From: $<span id="amount">0</span></label>
+            <label class="value-label" id="sliderValue">0</label>
+            <label for="amount">To: $<span id="amount">1000</span></label>
+          </div>
+        </div>
+        <div class="sortbyblock">
+          <label for="">Sort By</label>
+          <div class="rbcontain">
+            <label class="radio-button">
+              <input type="radio" name="sorting" id="none" checked onchange="sortProducts()">
+              <span class="radio"></span>
+              None
+            </label>
+            <label class="radio-button">
+              <input type="radio" name="sorting" id="lowToHigh" onchange="sortProducts()">
+              <span class="radio"></span>
+              Low to High
+            </label>
+
+            <label class="radio-button">
+              <input type="radio" name="sorting" id="highToLow" onchange="sortProducts()">
+              <span class="radio"></span>
+              High to Low
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="productblock">
+        <label for="" class="prhead">Products</label>
+        <div id="toggle-btn">&#x2261;</div>
+        <hr>
+        <div class="productsContainer" id="productsContainer">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#" class="to-top">
+    <img src="https://img.icons8.com/color/48/circled-up--v1.png" alt="circled-up--v1" />
+  </a>
+
+  <div class="footer">
+    <div class="top">
+      <div class="left">
+        <img
+          src="https://img.icons8.com/external-parzival-1997-outline-color-parzival-1997/64/external-satisfaction-logistics-and-supply-chain-management-parzival-1997-outline-color-parzival-1997.png"
+          alt="external-satisfaction-logistics-and-supply-chain-management-parzival-1997-outline-color-parzival-1997" />
+        <h1 for="">Purchase Paradise</h1>
+      </div>
+      <div class="right">
+        <div class="fabout">
+          <h3>About</h3>
+          <ul>
+            <li><a href="">Contact Us</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Careers</a></li>
+          </ul>
+        </div>
+        <div class="fabout">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="">Payment</a></li>
+            <li><a href="">Shipping</a></li>
+            <li><a href="">Cancellation & Return</a></li>
+            <li><a href="">Report</a></li>
+          </ul>
+        </div>
+        <div class="fabout">
+          <h3>Consumer's Policy</h3>
+          <ul>
+            <li><a href="">Terms & Conditions</a></li>
+            <li><a href="">Security</a></li>
+            <li><a href="">Privacy</a></li>
+            <li><a href="">Cancellation & Return</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="bottom">
+      <div class="bleft">
+        <label for="">
+          @ 2024 Purchase Paradise™ . All Rights Reserved.
+        </label>
+      </div>
+      <div class="bright">
+        <img width="24" height="24" src="https://img.icons8.com/material-sharp/24/facebook-new.png"
+          alt="facebook-new" />
+        <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/instagram-new.png"
+          alt="instagram-new" />
+        <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/twitterx--v1.png"
+          alt="twitterx--v1" />
+      </div>
+    </div>
+  </div>
+
+
+  <a href="#" class="to-top">
+    <img src="https://img.icons8.com/color/48/circled-up--v1.png" alt="circled-up--v1" />
+  </a>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const label = document.getElementById('proTtl');
+
+      if (label) {
+        const originalText = label.innerText.trim();
+        truncateLabel(label, 5);
+
+        // Set the full title as the tooltip
+        label.title = originalText;
+      }
+    });
+
+    function truncateLabel(label, words) {
+      const text = label.innerText.trim();
+      const truncatedText = text.split(' ').slice(0, words).join(' ');
+      label.innerText = truncatedText + '...';
+    }
+
+
+    function refreshPage() {
+      location.reload(true); // true parameter forces a reload from the server
+    }
+
+    // Initial product data
+    let allProducts = [];
+
+    // Initial product display
+    fetchProducts();
+
+    function fetchProducts() {
+      fetch('https://fakestoreapi.com/products')
+        .then(response => response.json())
+        .then(data => {
+          allProducts = data;
+          displayProducts(allProducts);
+        })
+        .catch(error => console.error('Error fetching products:', error));
+    }
+
+    function displayProducts(products) {
+      const productsContainer = document.getElementById("productsContainer");
+      productsContainer.innerHTML = "";
+
+      products.forEach((product) => {
+        const productCard = createProductCard(product);
+        productsContainer.appendChild(productCard);
+      });
+    }
+
+    function createProductCard(product) {
+      const productCard = document.createElement("div");
+      productCard.classList.add("productCard");
+      productCard.id = product.id;
+      
+
+      productCard.innerHTML = `
+        <div class="cardimg">
+            <img class="img" src="${product.image}" alt="${product.title}">
+        </div>
+        <div class="carddetails">
+            <label for="" class="proTtl" title="${product.title}">${product.title}</label>
+            <label for="" class="proCat">${product.category}</label>
+            <label for="" class="proPrice">$ ${product.price}</label>
+            <div>
+                <label for="" class="proRate">Rating : ${product.rating.rate}</label>
+                <label>|</label>
+                <label for="" class="proCount">Review : ${product.rating.count}</label>
+            </div>
+            <a href = "/pages/product.html">View Product</a>
+        </div>`;
+
+      return productCard;
+    }
+
+    function filterProductByCategory() {
+      const checkboxes = document.querySelectorAll('.filter-checkbox:checked');
+      const selectedCategories = Array.from(checkboxes).map(checkbox => checkbox.dataset.category);
+
+      if (selectedCategories.length === 0) {
+        // Show all products if no category is selected
+        displayProducts(allProducts);
+      } else {
+        const filteredProducts = allProducts.filter(product => {
+          return selectedCategories.includes(product.category.toLowerCase());
+        });
+
+        displayProducts(filteredProducts);
+      }
+    }
+
+    function sortProducts() {
+      const lowToHighRadioButton = document.getElementById('lowToHigh');
+      const highToLowRadioButton = document.getElementById('highToLow');
+      const noneRadioButton = document.getElementById('none');
+
+      if (lowToHighRadioButton.checked) {
+        allProducts.sort((a, b) => a.price - b.price);
+      } else if (highToLowRadioButton.checked) {
+        allProducts.sort((a, b) => b.price - a.price);
+      } // No need for 'else' here, as 'noneRadioButton' does nothing in this case
+
+      displayProducts(allProducts);
+    }
+
+    function filterProductsByPrice() {
+      const priceRange = document.getElementById('priceRange').value;
+      document.getElementById('sliderValue').textContent = priceRange;
+
+      const filteredProducts = allProducts.filter(product => product.price <= priceRange);
+      displayProducts(filteredProducts);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const rangeSlider = document.getElementById('rangeSlider');
+      const sliderValueLabel = document.getElementById('sliderValue');
+
+      // Check if elements exist
+      if (rangeSlider && sliderValueLabel) {
+        // Initial value
+        sliderValueLabel.textContent = rangeSlider.value;
+
+        // Update label on input change
+        rangeSlider.addEventListener('input', function () {
+          sliderValueLabel.textContent = rangeSlider.value;
+        });
+      } 
+    });
+
+    const toTop = document.querySelector(".to-top");
+
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 100) {
+        toTop.classList.add("active");
+      } else {
+        toTop.classList.remove("active");
+      }
+    });
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const sidebar = document.getElementById('sidebar');
+        const toggleBtn = document.getElementById('toggle-btn');
+
+        // Toggle sidebar on button click
+        toggleBtn.addEventListener('click', function () {
+            const sidebarLeft = parseInt(window.getComputedStyle(sidebar).left);
+            
+            if (sidebarLeft < 0) {
+                // Show the sidebar
+                sidebar.style.left = '0';
+            } else {
+                // Hide the sidebar
+                sidebar.style.left = '-300px';
+            }
+        });
+    });
+  </script>
+</body>
+
+</html>
