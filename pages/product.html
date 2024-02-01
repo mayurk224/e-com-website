@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product View</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="/index.html" class="logo">
+            <img src="https://img.icons8.com/external-parzival-1997-outline-color-parzival-1997/64/external-satisfaction-logistics-and-supply-chain-management-parzival-1997-outline-color-parzival-1997.png"
+                alt="external-satisfaction-logistics-and-supply-chain-management-parzival-1997-outline-color-parzival-1997" />
+            <label for="">Purchase Paradise</label>
+        </a>
+        <div class="searchbar">
+            <input type="search" name="" id="">
+        </div>
+        <div class="ctc">
+            <a href="" class="loginbtn"><img src="https://img.icons8.com/ios-filled/50/login-rounded-right.png"
+                    alt="login-rounded-right" />
+                <label for="">Login</label>
+            </a>
+            <a href="" class="cartbtn"><img src="https://img.icons8.com/material-outlined/24/shopping-cart--v1.png"
+                    alt="shopping-cart--v1" />
+                <label for="">Cart</label>
+            </a>
+        </div>
+    </div>
+    <div class="contain">
+        <div class="productviewpg">
+            <div class='gallery'>
+                <div class='hero'>
+                    <img id="heroImage" src='https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg' alt='Hero Image'>
+                </div>
+                <div class="btns">
+                    <div class="">
+                        <img src='https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg' alt='Image 1'
+                            onclick="updateHeroImage(this)">
+                    </div>
+                    <div class="">
+                        <img src='https://picsum.photos/id/38/800/500' alt='Image 2' onclick="updateHeroImage(this)">
+                    </div>
+                    <div class="">
+                        <img src='https://picsum.photos/id/101/800/500' alt='Image 3' onclick="updateHeroImage(this)">
+                    </div>
+                    <div class="">
+                        <img src='https://picsum.photos/id/182/800/500' alt='Image 4' onclick="updateHeroImage(this)">
+                    </div>
+                    <div class="">
+                        <img src='https://picsum.photos/id/494/800/500' alt='Image 5' onclick="updateHeroImage(this)">
+                    </div>
+                    <div class="">
+                        <img src='https://picsum.photos/id/494/800/500' alt='Image 5' onclick="updateHeroImage(this)">
+                    </div>
+                </div>
+
+            </div>
+            <div class="details" id="details">
+
+            </div>
+        </div>
+
+        <div class="relatedProduct">
+            <label for="">Related Products</label>
+            <div class="relatedCard" id="relatedCard">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="top">
+            <div class="left">
+                <img src="https://img.icons8.com/external-parzival-1997-outline-color-parzival-1997/64/external-satisfaction-logistics-and-supply-chain-management-parzival-1997-outline-color-parzival-1997.png"
+                    alt="external-satisfaction-logistics-and-supply-chain-management-parzival-1997-outline-color-parzival-1997" />
+                <h1 for="">Purchase Paradise</h1>
+            </div>
+            <div class="right">
+                <div class="fabout">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="fabout">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="">Payment</a></li>
+                        <li><a href="">Shipping</a></li>
+                        <li><a href="">Cancellation & Return</a></li>
+                        <li><a href="">Report</a></li>
+                    </ul>
+                </div>
+                <div class="fabout">
+                    <h3>Consumer's Policy</h3>
+                    <ul>
+                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="">Security</a></li>
+                        <li><a href="">Privacy</a></li>
+                        <li><a href="">Cancellation & Return</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="bottom">
+            <div class="bleft">
+                <label for="">
+                    @ 2024 Purchase Paradise™ . All Rights Reserved.
+                </label>
+            </div>
+            <div class="bright">
+                <img width="24" height="24" src="https://img.icons8.com/material-sharp/24/facebook-new.png"
+                    alt="facebook-new" />
+                <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/instagram-new.png"
+                    alt="instagram-new" />
+                <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/twitterx--v1.png"
+                    alt="twitterx--v1" />
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="to-top">
+        <img src="https://img.icons8.com/color/48/circled-up--v1.png" alt="circled-up--v1" />
+    </a>
+
+    <script>
+        function updateHeroImage(clickedImage) {
+            const heroImage = document.getElementById('heroImage');
+            heroImage.src = clickedImage.src;
+        }
+        const toTop = document.querySelector(".to-top");
+
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                toTop.classList.add("active");
+            } else {
+                toTop.classList.remove("active");
+            }
+        });
+
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const productDetailsContainer = document.getElementById('details');
+
+            // Fetch product data from the API
+            fetch('https://fakestoreapi.com/products/1')
+                .then(response => response.json())
+                .then(productData => {
+                    // Display product details in HTML
+                    displayProductDetails(productData);
+                })
+                .catch(error => console.error('Error fetching product details:', error));
+
+            function displayProductDetails(product) {
+                const productDetailsHTML = `
+                            <div class="dtitle">
+                <label for="">${product.title}</label>
+            </div>
+            <div class="dcategory">
+                <label for="">${product.category}</label>
+            </div>
+            <div class="drating">
+                <label for="">⭐${product.rating.rate}</label>
+                <label for="">|</label>
+                <label for="">💬${product.rating.count}</label>
+            </div>
+            <div class="dprice">
+                <label for="">$ ${product.price}</label>
+            </div>
+            <div class="ddescription">
+                <label for="">${product.description}</label>
+            </div>
+            <div class="dquantity">
+                <label for="">Quantity</label>
+                <input type="number" name="" id="">
+            </div>
+            <div class="dcartbtn">
+                <button>Add to Cart</button>
+            </div>
+            `;
+
+                productDetailsContainer.innerHTML = productDetailsHTML;
+            }
+        });
+
+
+        fetch("https://fakestoreapi.com/products")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const productContainer = document.getElementById("relatedCard");
+
+      let productCount = 0;
+
+      for (let i = 0; i < data.length && productCount < 4; i++) {
+        const product = data[i];
+
+        // Check if the product belongs to the "electronics" category
+        if (product.category.toLowerCase() === "men's clothing") {
+            productContainer.innerHTML += `<div class="productCard">
+            <div class="cardimg">
+              <img class="img" src="${product.image}" alt="" srcset="">
+            </div>
+            <div class="carddetails">
+              <label for="" class="proTtl" id="proTtl" title="${product.title}">${product.title}</label>
+              <label for="" class="proCat">${product.category}</label>
+              <label for="" class="proPrice">$ ${product.price}</label>
+              <div>
+                <label for="" class="proRate">Rating : ${product.rating.rate}</label>
+                <label for="">|</label>
+                <label for="" class="proCount">Review : ${product.rating.count}</label>
+              </div>
+            </div>
+          </div>`;
+
+          productCount++;
+        }
+      }
+    })
+    .catch((error) => {
+      console.error("Error fetching JSON:", error);
+    });
+    </script>
+</body>
+
+</html>

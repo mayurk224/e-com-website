@@ -40,8 +40,7 @@ body {
 
 .shopbycatagory,
 .latestProducts,
-.features,
-.footer {
+.features {
     margin-top: 40px;
 }
 
@@ -460,6 +459,7 @@ body {
     background-color: #171717;
     color: white;
     font-family: sans-serif;
+    margin-top: 20px;
 }
 
 .footer hr {
@@ -809,6 +809,187 @@ input[type="range"]::-moz-range-thumb {
  display: none;       
 }
 
+.contain{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.productviewpg{
+    display: flex;
+    gap: 30px;
+    margin: 100px 40px 0 40px;
+}
+
+.gallery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    min-width: 550px;
+    overflow: hidden;
+}
+
+.hero{
+    justify-content: center;
+    min-width: 550px;
+    max-height: 345px;
+    min-height: 345px;
+    object-fit: cover;
+    display: flex;
+}
+
+.hero img{
+    min-width: 550px;
+    max-height: 345px;
+    min-height: 345px;
+    object-fit: contain;
+    display: flex;
+}
+
+.btns{
+    width: 550px;
+    height: auto;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+.btns div{
+    width: 96px;
+    height: 96px;
+    display: flex;
+    object-fit: cover;
+    object-position: center;
+}
+.btns div img{
+    width: 96px;
+    height: 96px;
+    display: flex;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+.btns div img:hover {
+    opacity: 0.8;
+}
+
+  .details{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dtitle label{
+    font-weight: bold;
+    font-size: 28px;
+    font-family: sans-serif;
+    color: white;
+  }
+
+  .dcategory{
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  .dcategory label{
+    background-color: #4c4c4c;
+    color: white;
+    font-size: 16px;
+    font-family: sans-serif;
+    border-radius: 30px;
+    padding: 5px 10px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .drating{
+    display: flex;
+    gap: 10px;
+  }
+
+  .drating label{
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+  }
+
+  .dprice label{
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .ddescription label{
+    color: white;
+    font-family: sans-serif;
+    font-size: 15px;
+  }
+
+  .dquantity{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .dquantity label{
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+  }
+
+  .dquantity input{
+    width: 100px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+  }
+
+  .dcartbtn button{
+    background-color: #4285f4;
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .relatedProduct{
+    display: flex;
+    color: white;
+    flex-direction: column;
+    font-family: sans-serif;
+    padding: 20px 40px;
+  }
+
+  .relatedProduct label{
+    font-size: xx-large;
+  }
+
+  .relatedCard{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 15px;
+  }
+
+  
+
+
+
+
 @media only screen and (max-width: 320px) {
     .container-fluid {
         overflow: hidden;
@@ -995,7 +1176,6 @@ input[type="range"]::-moz-range-thumb {
     }
 
     .footer {
-        margin-top: 20px;
         padding: 0;
         display: flex;
         flex-direction: column;
