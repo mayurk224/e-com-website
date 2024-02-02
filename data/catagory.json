@@ -3,24 +3,70 @@
     "id":"1",
     "title":"Electronics",
     "img":"https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description":"Electronic products, also known as consumer electronics, encompass a wide range of devices that are used in daily life.",
     "href":"/electronics"
   },
   {
     "id":"2",
     "title":"Jewelery",
     "img":"https://images.pexels.com/photos/6567673/pexels-photo-6567673.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description":"a timeless blend of artistry and sentiment, reflecting diverse tastes and carrying profound symbolism as heirlooms or tokens of love.",
     "href":"/jewelery"
   },
   {
     "id":"3",
     "title":"Men's clothing",
     "img":"https://images.pexels.com/photos/297933/pexels-photo-297933.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description":"a dynamic blend of style and function, reflecting societal shifts and personal expression through timeless suits, casual streetwear, and individualistic choices.",
     "href":"/mensclothing"
   },
   {
     "id":"4",
     "title":"Women's clothing",
     "img":"https://images.pexels.com/photos/7130028/pexels-photo-7130028.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description":"a dynamic blend of style and function, reflecting societal shifts and personal expression through timeless suits, casual streetwear, and individualistic choices.",
+    "href":"/womensclothing"
+  },
+  {
+    "id":"5",
+    "title":"Home and Living",
+    "img":"https://images.pexels.com/photos/6480707/pexels-photo-6480707.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description":"Transform your living space with our curated collection of stylish furniture and home essentials. Discover functional and aesthetically pleasing pieces that cater to your comfort, while elevating your home decor.",
+    "href":"/womensclothing"
+  },
+  {
+    "id":"6",
+    "title":"Books and Stationery",
+    "img":"https://images.pexels.com/photos/5490916/pexels-photo-5490916.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "description":"Immerse yourself in captivating narratives and enhance your productivity with our diverse range of books and stationery. Explore fiction, non-fiction, e-books, along with quality stationery for all your writing and creative needs.",
+    "href":"/womensclothing"
+  },
+  {
+    "id":"7",
+    "title":"Toys & Games",
+    "img":"https://images.pexels.com/photos/7269668/pexels-photo-7269668.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "description":"Ignite joy and learning through our vibrant selection of toys and games. From entertaining toys for kids to engaging board games and educational puzzles, discover endless possibilities for fun and development.",
+    "href":"/womensclothing"
+  },
+  {
+    "id":"8",
+    "title":"Health & Wellness",
+    "img":"https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "description":"Elevate your well-being with our range of health and wellness products. From vitamins and supplements to fitness equipment and organic options, prioritize self-care and embrace a healthier lifestyle.",
+    "href":"/womensclothing"
+  },
+  {
+    "id":"9",
+    "title":"Sports & Outdoors",
+    "img":"https://images.pexels.com/photos/3927387/pexels-photo-3927387.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "description":"Fuel your passion for an active lifestyle with our sports and outdoor collection. Explore quality sports equipment, activewear, and outdoor gear, encouraging fitness, adventure, and enjoyment of the great outdoors.",
+    "href":"/womensclothing"
+  },
+  {
+    "id":"10",
+    "title":"Beauty & Personal Care",
+    "img":"https://images.pexels.com/photos/264591/pexels-photo-264591.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "description":"Unleash your radiance with our curated selection of skincare, haircare, makeup, and personal care essentials. Discover products that enhance your natural beauty and self-care routine for a confident and glowing you.",
     "href":"/womensclothing"
   }
 ]

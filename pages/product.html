@@ -30,6 +30,7 @@
             </a>
         </div>
     </div>
+    
     <div class="contain">
         <div class="productviewpg">
             <div class='gallery'>
@@ -165,7 +166,7 @@
                 <label for="">${product.title}</label>
             </div>
             <div class="dcategory">
-                <label for="">${product.category}</label>
+                <a href="/pages/category.html">${product.category}</a>
             </div>
             <div class="drating">
                 <label for="">⭐${product.rating.rate}</label>
@@ -219,7 +220,6 @@
               <label for="" class="proPrice">$ ${product.price}</label>
               <div>
                 <label for="" class="proRate">Rating : ${product.rating.rate}</label>
-                <label for="">|</label>
                 <label for="" class="proCount">Review : ${product.rating.count}</label>
               </div>
             </div>

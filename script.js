@@ -58,26 +58,29 @@ fetch("data/catagory.json") // Replace with the correct file path or URL
     return response.json();
   })
   .then((data) => {
-    // Display the JSON data in cards
+    // Display the JSON data for the first four categories
     const catagoryContainer = document.getElementById("catagoryContainer");
 
-    data.forEach((product) => {
+    // Loop through the first four categories
+    for (let i = 0; i < 4 && i < data.length; i++) {
+      const product = data[i];
       catagoryContainer.innerHTML += `
-      <div>
-      <div id=${product.id}>
-        <img src="${product.img}" alt="" srcset="">
         <div>
-          <label for="">${product.title}</label>
-          <button>View Category</button>
+          <div id=${product.id}>
+            <img src="${product.img}" alt="" srcset="">
+            <div>
+              <label for="">${product.title}</label>
+              <button>View Category</button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-       `;
-    });
+      `;
+    }
   })
   .catch((error) => {
     console.error("Error fetching JSON:", error);
   });
+
 
 fetch("data/slider.json")
   .then((response) => {
