@@ -1086,6 +1086,237 @@ input[type="range"]::-moz-range-thumb {
   vertical-align: middle;
 }
 
+
+.cartSection{
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+    font-family: sans-serif;
+    padding: 0 30px 20px 30px;
+}
+.cartSection>label{
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+}
+.itemContain{
+    display: flex;
+    gap: 40px;
+    margin: auto;
+}
+.itemSection{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.itemCard{
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+    width: 570px;
+    background-color: #282828;
+}
+.itemBox{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.itemImg{
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    background-color: #4c4c4c;
+    border-radius: 10px;
+}
+.itemImg>img{
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.itemDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.itemDetails>hr{
+    width: 100%;
+    margin: 0;
+}
+.itemTitleRemove{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.itemTitle{
+    font-size: larger;
+    font-weight: bold;
+}
+.removeBtn{
+    cursor: pointer;
+}
+.itemColor,.itemSize,.itemCategory{
+    font-size: medium;
+}
+.itemRating{
+    display: flex;
+    gap: 10px;
+}
+.itemRate,.itemReview{
+    font-size: small;
+}
+.itemPriceSection{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.itemQty{
+    display: flex;
+    align-items: center;
+    width: 110px;
+    gap: 5px;
+}
+.itemQty>label{
+    font-size: medium;
+}
+.itemQty>input{
+    width: 50px;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    text-align: center;
+    padding-left: 13px;
+}
+.itemPrice{
+    font-size: medium;
+    color: #6d6d6d;
+}
+.itemTotalPrice{
+    font-size: medium;
+    color: #ffffff;
+}
+.removeBtn>img{
+    filter: invert();
+    cursor: pointer;
+}
+.billingSection{
+    display: flex;
+}
+.billingCard{
+    display: flex;
+    flex-direction: column;
+}
+.billingCard>label{
+    font-size: x-large;
+}
+.billingCard>hr{
+    width: 99.5%;
+}
+.couponSection{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.couponSection>.title{
+    font-size: large;
+}
+.couponSection>div{
+    display: flex;
+    gap: 5px;
+}
+.couponSection>div>button{
+    background-color: #4285f4;
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.couponSection>.err{
+    font-size: small;
+    color: rgb(255, 55, 55);
+}
+.totalItemQtyPrice{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+}
+.totalItemQtyPrice>hr{
+    width: 99.5%;
+    margin: 0;
+}
+.Labels{
+    display: flex;
+    align-items: center;
+}
+.Labels>div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.checkoutItems{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.chkItem{
+    display: flex;
+}
+.chkItem>div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.totalBlock{
+    display: flex;
+}
+.totalBlock>div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.totalBlock>div>label{
+    font-size: larger;
+    font-weight: bold;
+}
+.PriceDetails{
+    display: none;
+}
+.checkOutBtn1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+.checkOutBtn1>a{
+    background-color: #4285f4;
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    cursor: pointer;
+    width: 150px;
+}
+
+
+
+
+
   
 
 
@@ -1377,9 +1608,92 @@ input[type="range"]::-moz-range-thumb {
         display: flex;
         flex-direction: column;
     }
-
     .cardCon .card{
         width: 290px;
+    }
+
+
+    .cartSection{
+        margin-top: 60px;
+        padding: 20px;
+        overflow: hidden;
+    }
+    .itemContain{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .itemSection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 280px;
+    }
+    .itemCard{
+        width: 250px;
+    }
+    .itemBox{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        width: 250px;
+    }
+    .itemImg{
+        width: 250px;
+        height: 150px;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    .itemImg>img{
+        width: 250px;
+        height: 150px;
+        object-fit: cover;
+    }
+    .itemDetails{
+        width: 100%;
+    }
+    .itemPriceSection{
+        display: flex;
+        flex-direction: column;
+    }
+    .billingSection{
+        width: 280px;
+        overflow: hidden;
+    }
+    .billingCard{
+        width: 100%;
+    }
+    .totalItemQtyPrice{
+        display: none;
+    }
+    .PriceDetails{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .PriceDetails>label{
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 10px;
+    }
+    .PriceDetails>div{
+        display: flex;
+        justify-content: space-between;
+    }
+    .checkOutBtn2{
+        margin-top: 20px;
+    }
+    .checkOutBtn2>a{
+        width: 100%;
+        padding: 5px 10px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        transition: all 0.3s ease;
+        border-radius: 30px;
     }
 
 }
