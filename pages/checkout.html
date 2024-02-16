@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckOut Page</title>
+</head>
+<link rel="stylesheet" href="/style.css">
+<body>
+
+    <div class="navbar">
+        <a href="/index.html" class="logo">
+            <img src="https://img.icons8.com/external-parzival-1997-outline-color-parzival-1997/64/external-satisfaction-logistics-and-supply-chain-management-parzival-1997-outline-color-parzival-1997.png"
+                alt="external-satisfaction-logistics-and-supply-chain-management-parzival-1997-outline-color-parzival-1997" />
+            <label for="">Purchase Paradise</label>
+        </a>
+        <div class="searchbar">
+            <input type="search" name="" id="">
+        </div>
+        <div class="ctc">
+            <a href="" class="loginbtn"><img src="https://img.icons8.com/ios-filled/50/login-rounded-right.png"
+                    alt="login-rounded-right" />
+                <label for="">Login</label>
+            </a>
+            <a href="/pages/cart.html" class="cartbtn"><img
+                    src="https://img.icons8.com/material-outlined/24/shopping-cart--v1.png" alt="shopping-cart--v1" />
+                <label for="">Cart</label>
+            </a>
+        </div>
+    </div>
+
+    <div class="CheckOutSection">
+        <label class="checkoutlabel">Checkout</label>
+        <hr>
+
+        <div class="checkoutContain">
+
+            <div class="CheckOutDetails">
+
+                <div class="Tabdiv">
+                    <div class="billingTab">
+                        <label class="TabNo">1</label>
+                        <label class="TabName">Billing Details</label>
+                    </div>
+                    <div class="paymentTab">
+                        <label class="TabNo">2</label>
+                        <label class="TabName">Payment Details</label>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="billingDetailsContainer" id="billingDetailsContainer" style="display: none;">
+                    <label for="">Billing Details</label>
+                    <div class="">
+                        <label for="">Full Name</label>
+                        <input type="text" name="" id="">
+                    </div>
+                    <div class="">
+                        <label for="">Email</label>
+                        <input type="email" name="" id="">
+                    </div>
+                    <div class="">
+                        <label for="">Phone</label>
+                        <input type="tel" name="" id="">
+                    </div>
+                    <div class="">
+                        <label for="">Address</label>
+                        <textarea name="" id="" cols="30" rows="2" ></textarea>
+                    </div>
+                    <div class="">
+                        <label for="">Country</label>
+                        <select name="" id="">
+                            <option value="">Select Country</option>
+                            <option value="">United States</option>
+                            <option value="">United Kingdom</option>
+                            <option value="">United Arab Emirates</option>
+                        </select>
+                    </div>
+                    <div class="">
+                        <label for="">State</label>
+                        <select name="" id="">
+                            <option value="">Select State</option>
+                            <option value="">Alabama</option>
+                            <option value="">Alaska</option>
+                            <option value="">American Samoa</option>
+                        </select>
+                    </div>
+                    <div class="">
+                        <label for="">City</label>
+                        <select name="" id="">
+                            <option value="">Select City</option>
+                            <option value="">Anchorage</option>
+                            <option value="">Arizona</option>
+                            <option value="">Arkansas</option>
+                        </select>
+                    </div>
+                    <div class="">
+                        <label for="">Zip Code</label>
+                        <input type="text" name="" id="">
+                    </div>
+                    <div class="nxtpymtbtn">
+                        <button onclick="nextPayment()">Next Payment</button>
+                    </div>
+
+                </div>
+
+                <div class="billingDetailsContainer">
+                    <label for="">2. Payment Details</label>
+                    <div class="sortbyblock">
+                        <label for="">Payment Method</label>
+                        <div class="rbcontain" style="display: flex;flex-direction: column; align-items: start;">
+                          <label class="radio-button">
+                            <input type="radio" name="paymentMode" id="codRadio" value="Cod" checked>
+                            <span class="radio"></span>
+                            Cash on Delivery
+                          </label>
+                          <label class="radio-button">
+                            <input type="radio" name="paymentMode" id="debitRadio" value="debit">
+                            <span class="radio"></span>
+                            Debit Card
+                          </label>
+                          <label class="radio-button">
+                            <input type="radio" name="paymentMode" id="upiRadio" value="upi">
+                            <span class="radio"></span>
+                            Upi
+                          </label>
+                          
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="paymentMethod"  id="codDiv">
+                        <div class="confirmDetails">
+                            <label for="" style="margin-bottom: 10px;">Confirm Details</label>
+                        <div>
+                            <label for="">User Name</label>
+                            <label for="">User Contact No</label>
+                            <label for="">usermailid@gmail.com</label>
+                            <label for="">User Address</label>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="paymentMethod" id="debitDiv" style="display: none;" >
+                        <div class="debitCardDetails">
+                            <label for="">Card Number</label>
+                        <input type="number" name="" id="">
+                        <label for="">Card Holder Name</label>
+                        <input type="text" name="" id="">
+                        <div>
+                            <div>
+                                <label for="">Expiry Date</label>
+                            <input type="date" name="" id="">
+                            </div>
+                            <div>
+                                <label for="">Cvv</label>
+                                <input type="number" name="" id="">
+                            </div>
+                        </div>
+                        <label for="">Otp</label>
+                        <input type="number" name="" id="">
+                        </div>
+                      </div>
+                      <div class="paymentMethod" id="upiDiv"  style="display:none;">
+                        <div class="upiDetails">
+                            <label for="">Upi</label>
+                        <input type="text" name="" id="">
+                        <button>Submit</button>
+                        </div>
+                      </div>
+                </div>
+
+            </div>
+
+            <div class="CheckOutSummery">
+                <div class="billingCard">
+
+                    <label for="">Order Summary</label>
+
+                    <hr>
+
+                    <div class="couponSection">
+                        <label for="" class="title">Coupon Code</label>
+                        <div>
+                            <input type="text" name="" id="">
+                            <button>Apply</button>
+                        </div>
+                        <label for="" class="err">Enter Valid Code</label>
+                    </div>
+
+                    <hr>
+
+                    <div class="totalItemQtyPrice">
+                        <div class="Labels">
+                            <div class="">
+                                <label for="">Items</label>
+                            </div>
+                            <div class="">
+                                <label for="">Qty</label>
+                            </div>
+                            <div class="">
+                                <label for="">Total</label>
+                            </div>
+                        </div>
+                        <div class="checkoutItems" id="checkoutItems">
+                
+                            <div class="chkItem">
+                                <div class="">
+                                    <label for="">1. product 1 asdfas asdf asdf</label>
+                                </div>
+                                <div class="">
+                                    <label for="">1</label>
+                                </div>
+                                <div class="">
+                                    <label for="">$ 150</label>
+                                </div>
+                            </div>
+                            <div class="chkItem">
+                                <div class="">
+                                    <label for="">2. product 1 asdfas asdf asdf</label>
+                                </div>
+                                <div class="">
+                                    <label for="">1</label>
+                                </div>
+                                <div class="">
+                                    <label for="">$ 150</label>
+                                </div>
+                            </div>
+                
+                        </div>
+                        <hr>
+                        <div class="totalBlock">
+                            <div class="">
+                                <label for="">Total</label>
+                            </div>
+                            <div class="">
+                                <label for="">2</label>
+                            </div>
+                            <div class="">
+                                <label for="">1540</label>
+                            </div>
+                        </div>
+
+                        <div class="checkOutBtn1">
+                            <a href="/pages/orderConfirmation.html">Place Order</a>
+                        </div>
+                    </div>
+
+                    <div class="PriceDetails">
+                        <label for="">Price Details</label>
+                        <div class="">
+                            <label for="">Price (2 items)</label>
+                            <label for="">Rs. 7360</label>
+                        </div>
+                        <div class="">
+                            <label for="">Discount</label>
+                            <label for="">Rs. 7360</label>
+                        </div>
+                        <div class="">
+                            <label for="">Delivery Charges</label>
+                            <label for="">Rs. 7360</label>
+                        </div>
+                        <div class="">
+                            <label for="">Total Amount</label>
+                            <label for="">Rs. 7360</label>
+                        </div>
+
+                        <div class="checkOutBtn1">
+                            <a href="/pages/checkout.html">Place Order</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="top">
+            <div class="left">
+                <img src="https://img.icons8.com/external-parzival-1997-outline-color-parzival-1997/64/external-satisfaction-logistics-and-supply-chain-management-parzival-1997-outline-color-parzival-1997.png"
+                    alt="external-satisfaction-logistics-and-supply-chain-management-parzival-1997-outline-color-parzival-1997" />
+                <h1 for="">Purchase Paradise</h1>
+            </div>
+            <div class="right">
+                <div class="fabout">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="fabout">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="">Payment</a></li>
+                        <li><a href="">Shipping</a></li>
+                        <li><a href="">Cancellation & Return</a></li>
+                        <li><a href="">Report</a></li>
+                    </ul>
+                </div>
+                <div class="fabout">
+                    <h3>Consumer's Policy</h3>
+                    <ul>
+                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="">Security</a></li>
+                        <li><a href="">Privacy</a></li>
+                        <li><a href="">Cancellation & Return</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="bottom">
+            <div class="bleft">
+                <label for="">
+                    @ 2024 Purchase Paradise™ . All Rights Reserved.
+                </label>
+            </div>
+            <div class="bright">
+                <img width="24" height="24" src="https://img.icons8.com/material-sharp/24/facebook-new.png"
+                    alt="facebook-new" />
+                <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/instagram-new.png"
+                    alt="instagram-new" />
+                <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/twitterx--v1.png"
+                    alt="twitterx--v1" />
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="to-top">
+        <img src="https://img.icons8.com/color/48/circled-up--v1.png" alt="circled-up--v1" />
+    </a>
+
+    <script>
+        const toTop = document.querySelector(".to-top");
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                toTop.classList.add("active");
+            } else {
+                toTop.classList.remove("active");
+            }
+        });
+
+        function nextPayment(){
+            const billingDetailsContainer = document.querySelector('#billingDetailsContainer');
+billingDetailsContainer.style.display = 'none';
+        }
+
+        document.querySelectorAll('input[name="paymentMode"]').forEach(function(radio) {
+    radio.addEventListener('change', function() {
+        const selectedPaymentMode = this.value;
+        document.querySelectorAll('.paymentMethod').forEach(function(method) {
+            if (method.id === `${selectedPaymentMode.toLowerCase()}Method`) {
+                method.style.display = 'block';
+            } else {
+                method.style.display = 'none';
+            }
+        });
+    });
+});
+
+
+    </script>
+    
+</body>
+</html>
