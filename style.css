@@ -1742,10 +1742,90 @@ h1 {
 }
 
 
-
-
-
-
+.contactusSection{
+    width: 100%;
+    margin-top: 90px;
+}
+.contactContent{
+    padding: 20px 50px;
+    font-family: sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contactContent>h1{
+    text-align: center;
+    margin: 0;
+}
+.contactContent>hr{
+    width: 99%;
+}
+.content{
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    margin-right: 0;
+    margin-left: 0;
+}
+.contactCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.contactCard>.text,h3{
+margin: 0;
+}
+.contactCard>.text,p{
+    margin: 0;
+}
+.content>.left{
+    display: flex;
+    flex-direction: column;
+}
+.content>.right{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+}
+.right>div{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contactform{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+}
+.content>.right>hr{
+    width: 99%;
+}
+.contactform>input{
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 0;
+    height: 30px;
+}
+.contactform>textarea{
+    padding: 0;
+}
+.contactform>button{
+    width: 100%;
+    background-color: #3498db;
+    border-radius: 5px;
+    padding: 0;
+    height: 30px;
+}
   
 
 
@@ -2209,4 +2289,24 @@ h1 {
         width: 280px;
     }
 
+
+    .contactusSection{
+        margin-top: 70px;
+        overflow: hidden;
+    }
+    .contactContent{
+        padding: 10px;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: 280px;
+    }
+    .right>div{
+        width: 280px;
+    }
+    .content>.right{
+        width: 280px;
+    }
+    
 }
