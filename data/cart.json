@@ -1,0 +1,9 @@
+[
+    {
+        "id":"1",
+        "title":"Electronics",
+        "img":"https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "description":"Electronic products, also known as consumer electronics, encompass a wide range of devices that are used in daily life.",
+        "href":"/electronics"
+    }
+]

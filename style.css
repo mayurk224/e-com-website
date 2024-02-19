@@ -1826,6 +1826,41 @@ margin: 0;
     padding: 0;
     height: 30px;
 }
+
+
+.searchSection{
+    margin-top: 90px;
+    font-family: sans-serif;
+}
+.searchContent{
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.searchContent>hr{
+    width: 99%;
+}
+.searchContent>h1{
+    margin: 0;
+}
+.searchContent>div{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.searchContent>h1{
+    color: white;
+    font-family: sans-serif;
+}
+.searchContent>div>input{
+    width: 40%;
+    height: 35px;
+    border-radius: 20px;
+    padding: 0 10px;
+}
   
 
 
@@ -2309,4 +2344,11 @@ margin: 0;
         width: 280px;
     }
     
+
+    .searchContent>div>input{
+        width: 100%;
+    }
+    .searchContent{
+        padding: 10px;
+    }
 }
